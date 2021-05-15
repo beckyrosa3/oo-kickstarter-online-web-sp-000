@@ -7,6 +7,11 @@ class Backer
     @backed_projects = []
   end
 
+  def project=(project)
+    @project = project
+    project.back_project(self) unless project.backer.include?(self)
+  end
+
   def backed_projects
     @backed_projects
   end
