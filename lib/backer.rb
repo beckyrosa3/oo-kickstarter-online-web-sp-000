@@ -13,6 +13,7 @@ class Backer
 
   def back_project(project)
     @backed_projects << project
+    project.author = self
   end
 
 end
