@@ -21,5 +21,5 @@ class Project
     @backer = backer
     backer.add_backer(self) unless backer.project.include?(self)
   end
-  
+
 end
