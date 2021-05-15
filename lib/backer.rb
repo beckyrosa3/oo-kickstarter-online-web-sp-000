@@ -9,6 +9,7 @@ class Backer
 
   def back_project(project)
     @backed_projects << project
+    project.backers << self
     #project.author = self unless project.backer == self
   end
 
@@ -18,7 +19,7 @@ class Backer
 
   def project=(project)
     @project = project
-    project.back_project(self) unless project.backer.include?(self)
+
   end
 
 
